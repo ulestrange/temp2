@@ -1,0 +1,34 @@
+﻿@page "{id}"
+@model WebApplication7.Pages.People.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Person</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Person.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.FamilyName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Person.FamilyName)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Person.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
