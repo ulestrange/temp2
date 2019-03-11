@@ -7,13 +7,7 @@
 
 <h2>Index</h2>
 
-@if (!String.IsNullOrEmpty(@Model.Message))
-{
-    <div class="alert alert-success ">
-        <a href="#" class="close" data-dismiss="alert">&times;</a>
-        @Model.Message
-    </div>
-}
+
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -53,4 +47,14 @@
             </tr>
         }
     </tbody>
+
+
 </table>
+
+@if (!String.IsNullOrEmpty(@Model.Message))
+{
+    <div class="alert alert-success ">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        @Model.Message
+    </div>
+}
