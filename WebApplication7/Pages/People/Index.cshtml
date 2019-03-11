@@ -41,9 +41,14 @@
                     @Html.DisplayFor(modelItem => item.FamilyName)
                 </td>
                 <td>
-                    <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-page="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a href="Edit">Edit</a> |
                     <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                    <a href="./Details">Details</a> |
+                    <a href="Details">Details</a> |
                     <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                    <a asp-page="nonsense" asp-route-id="@item.ID">Nonsense</a>
+
                 </td>
             </tr>
         }
